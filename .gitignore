@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Build output
+dist/
+frontend/dist/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+.venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# IDE / OS
+.idea/
+.vscode/
+*.log
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+.env.*
+
+# ---------------------------------------------------------------------------
+# Generated ML artifacts (reproduce via training scripts)
+# ---------------------------------------------------------------------------
+
+# Trained models
+backend/models/**/anomaly_model.pkl
+backend/models/**/training_report.json
+
+# Inference audit trail (written at runtime)
+backend/predictions/
+
+# Evaluation reports (regenerate via tools.evaluate_folder)
+backend/reports/
+
+# Training images (keep .gitkeep placeholders only)
+backend/datasets/**/ok/*
+!backend/datasets/**/ok/.gitkeep
+backend/datasets/**/not_ok/*
+!backend/datasets/**/not_ok/.gitkeep
+
+# Legacy paths (no longer used — ignore if present locally)
+backend/model/best_model.pth
+backend/models/anomaly_model.pkl
+backend/datasets/ok/
