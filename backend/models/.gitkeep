@@ -1,0 +1,8 @@
+# Trained model artifacts (gitignored binaries).
+#
+# Per-part layout:
+#   models/part_A/anomaly_model.pkl
+#   models/part_A/training_report.json
+#
+# Train with:
+#   cd backend && python -m training.train --part-type part_A
